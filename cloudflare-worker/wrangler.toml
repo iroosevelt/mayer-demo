@@ -1,0 +1,17 @@
+# Cloudflare Worker Configuration
+# Deploy with: wrangler deploy
+
+name = "mayer-hubspot-webhook"
+main = "hubspot-webhook.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables (will be set via wrangler)
+# BACKEND_API_URL - your Railway backend URL
+# API_SECRET - optional secret for auth
+
+[env.production]
+# Set these via: wrangler secret put BACKEND_API_URL
+# Or in Cloudflare dashboard: Workers > Settings > Variables
+
+# Example (don't commit real values):
+# vars = { BACKEND_API_URL = "https://your-app.railway.app" }

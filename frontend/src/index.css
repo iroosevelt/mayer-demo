@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased bg-dark-50;
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Premium Button Styles - Flat Design */
+  .btn-primary {
+    @apply px-6 py-2 bg-[#0F8DFF] text-white font-medium rounded-[5px] hover:bg-primary-700 active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-white text-dark-700 font-medium rounded-[5px] border border-dark-200 hover:bg-dark-50 active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-2 text-dark-600 font-medium rounded-[5px] hover:bg-dark-100 active:scale-[0.98] transition-all duration-200;
+  }
+
+  /* Premium Card Styles - Flat Design */
+  .card {
+    @apply bg-white rounded-2xl border border-dark-100;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-3xl border border-dark-200 hover:border-dark-300 transition-colors duration-300;
+  }
+
+  /* Premium Input Styles - Flat Design */
+  .input {
+    @apply w-full px-4 py-3 bg-white border border-dark-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .input-error {
+    @apply border-danger-500 focus:ring-danger-500;
+  }
+
+  /* Status Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-success {
+    @apply bg-success-100 text-success-700;
+  }
+
+  .badge-warning {
+    @apply bg-warning-100 text-warning-700;
+  }
+
+  .badge-danger {
+    @apply bg-danger-100 text-danger-700;
+  }
+
+  .badge-info {
+    @apply bg-primary-100 text-primary-700;
+  }
+
+  /* Glass Morphism Effect */
+  .glass {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+
+  /* Infinite horizontal scroll animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  /* Slower scroll animation for testimonials */
+  .animate-scroll-slow {
+    animation: scroll 60s linear infinite;
+  }
+
+  .animate-scroll-slow:hover {
+    animation-play-state: paused;
+  }
+}
